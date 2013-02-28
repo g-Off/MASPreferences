@@ -219,6 +219,7 @@ static NSString *const PreferencesKeyForViewBounds (NSString *identifier)
     [[NSUserDefaults standardUserDefaults] setObject:controller.identifier forKey:kMASPreferencesSelectedViewKey];
     
     NSView *controllerView = controller.view;
+	controllerView.translatesAutoresizingMaskIntoConstraints = NO;
     
     _selectedViewController = controller;
     if ([controller respondsToSelector:@selector(viewWillAppear)])
